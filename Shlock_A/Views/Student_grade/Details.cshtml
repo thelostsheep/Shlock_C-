@@ -1,0 +1,58 @@
+﻿@model Shlock_A.Models.Student_grade
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student_grade</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Student_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student_Sex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student_Sex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Courses_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Courses_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Courses_Grad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Courses_Grad)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Student_gradeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

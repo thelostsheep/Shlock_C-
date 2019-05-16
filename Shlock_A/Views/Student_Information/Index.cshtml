@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Shlock_A.Models.Student_Information>
+
+@{
+    ViewBag.Title = "学生信息";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Xueshengxingming)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Xueshengxingbie)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Xueshengxingming)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Xueshengxingbie)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Xueshengxuehao }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Xueshengxuehao }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Xueshengxuehao })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Shlock_A.Models.Student_grade>
+
+@{
+    ViewBag.Title = "学生成绩";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Student_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student_Sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Courses_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Courses_Grad)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student_Sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Courses_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Courses_Grad)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Student_gradeID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Student_gradeID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Student_gradeID })
+        </td>
+    </tr>
+}
+
+</table>
